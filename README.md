@@ -16,7 +16,9 @@ It also provides Mqtt implementation for pub/sub on multiple topics - it simulat
 
 
 ### Running the Application in Docker
-**NB: make sure you have docker installed and running
+**NB:
+    Make sure you have docker installed and running.
+    Also note the different PORTS - app, redis and mosquitto containers all expose different ports for different environments.
 
 ## development env:
     - Run:
@@ -60,5 +62,6 @@ It also provides Mqtt implementation for pub/sub on multiple topics - it simulat
         - Run:
             npm test
     Integration Tests:
+        **NB: No integration(as well as API testing) tests were done, due to time constrain, but they are important to ensure reliability.
         - Run:
             npm run test:integration

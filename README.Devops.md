@@ -1,4 +1,4 @@
-# Devop Implementation:
+# Devops Implementation:
 
 To create a real-life heating control system that allows thousands of users to control their devices using a web application and a mobile application, a suitable infrastructure architecture needs to be designed.
 

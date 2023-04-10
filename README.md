@@ -45,6 +45,8 @@ It also provides Mqtt implementation for pub/sub on multiple topics - it simulat
 
 
 ### Endpoints
+** We can use Swagger to define the api docs, however this is fine for now, since it's a proof of concept.
+
     - URI: /set-temp
         - Description: Adjust a room valve based on tempearute input
         - Method: POST

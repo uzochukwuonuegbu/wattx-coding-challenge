@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+
+  heating-controller-app-dev:
+    build:
+      context: ./
+      target: dev
+    links:
+      - redis
+      - mosquitto
+    volumes:
+      - .:/src
+    command: npm run dev
+    ports:
+      - '3001:3001'
+    environment:
+      - REDIS_URL=redis://redis-dev:6379
+      - NODE_ENV=dev
+      - PORT=3001
+    restart: on-failure
+  redis-dev:
+    image: redis:latest
+    container_name: cache-dev
+    ports:
+      - '9001:9001'
+    volumes:
+      - redis-data:/data
+      - redis-conf:/usr/local/etc/redis/redis.conf
+
+  mosquitto-dev:
+    image: eclipse-mosquitto
+    ports:
+      - '1884:1884'
+volumes:
+  redis-data:
+  redis-conf:

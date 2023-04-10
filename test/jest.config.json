@@ -1,0 +1,24 @@
+{
+  "moduleFileExtensions": [
+    "js",
+    "json",
+    "ts"
+  ],
+  "rootDir": "../test",
+  "testRegex": ".spec.ts$",
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "coverageDirectory": "../coverage",
+  "testEnvironment": "node",
+  "testTimeout": 20000,
+  "coveragePathIgnorePatterns": [
+    "__mocks__",
+    ".mock.ts",
+    ".d.ts",
+    "logger.ts"
+  ],
+  "setupFilesAfterEnv": [
+    "<rootDir>/../test/jest.setup.js"
+  ]
+}

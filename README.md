@@ -1,5 +1,7 @@
 # Heating System Controller
 
+*Key infrastructure considerations for Devops Implementation can be found in README.Devops.md, in the root folder*
+
 This is a Node.js application that implements a Heating Systme Controller. 
 It expposes one endpoint: /set-temp which adjusts a room valve based on tempearute input. The endpoint returns JSON.
 It also provides Mqtt implementation for pub/sub on multiple topics - it simulates periodic (random) room temperature readings, calculates the valve level(openess) for the room, and then publishes this information to actuator topic(per room).

@@ -5,9 +5,12 @@ It expposes one endpoint: /set-temp which adjusts a room valve based on tempearu
 It also provides Mqtt implementation for pub/sub on multiple topics - it simulates periodic (random) room temperature readings, calculates the valve level(openess) for the room, and then publishes this information to actuator topic(per room).
 
 ## Implementation Details
-    This application is built using Node.js(Typescript) and the Express framework, we are using Mosquitto.org as a cloud broker for out Mqtt events. It uses a simple algorithm to calculate the valve level to set. It also temporarily caches the current valve level of a room, using redis.
+    This application is built using Node.js(Typescript) and the Express framework.
+    We are using Mosquitto.org as a cloud broker for out Mqtt events.
+    Uses a simple algorithm to calculate the valve level to set.
+    It also temporarily caches the current valve level of a room, using redis.
 
-    Note: I simulated the periodic temperature readings on the topic /readings/room-1/temperature, in main.ts, using NODEJS setInterval().
+    Note: I simulated the periodic temperature readings on the topic /readings/room-1/temperature, using NODEJS setInterval().
 
 
 ### Getting Started:

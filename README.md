@@ -18,7 +18,7 @@ It also provides Mqtt implementation for pub/sub on multiple topics - it simulat
 ### Running the Application in Docker
 **NB:
     Make sure you have docker installed and running.
-    Also note the different PORTS - app, redis and mosquitto containers all expose different ports for different environments.
+    Also note the different PORTS - which allows us to have multiple environments running concurrently.
 
 ## development env:
     - Run:

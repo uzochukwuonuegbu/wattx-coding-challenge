@@ -14,7 +14,7 @@ We should also use load balancers to distribute the incoming requests across the
 I would consider using messaging queues to communicate asynchronously between microservices, this provides HIGH RESILIENCE and AGILITY.
 Eventual consistensy might be a trade off though, however, if properly designed, using the event-driven approach would potentially improve SCALABITY, because it allows the system to react to event in real-time, as opposed to processing in batches.
 
-## Containerization: 
+## Containerization(Infrastructure as Code): 
 
 The heating control system can be containerized using Docker(I already set up different envs for Dev and Prod as an example, as seen in README.md).
 This allows the system to be deployed consistently across multiple environments, and it makes it easier to manage dependencies and versioning.

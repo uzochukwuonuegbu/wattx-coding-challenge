@@ -1,7 +1,7 @@
-import { IMqttClient, IRoomSensorEventHandler, MqttTopics } from '../interfaces';
+import { IMqttClient, IMqttServer, IRoomSensorEventHandler, MqttTopics } from '../interfaces';
 import { getMqttClient, getRoomSensorEventHandler } from '../services/services-injection';
 
-export class MqttServer {
+export class MqttServer implements IMqttServer {
     constructor(private roomSensorEventHandler: IRoomSensorEventHandler = getRoomSensorEventHandler(), private mqttClient: IMqttClient = getMqttClient()) {
         this.roomSensorEventHandler.processRoomSensorEvent = this.roomSensorEventHandler.processRoomSensorEvent.bind(this.roomSensorEventHandler);
     }

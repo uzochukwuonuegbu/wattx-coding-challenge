@@ -15,6 +15,9 @@ export interface IMqttClient {
     unsubscribe(topic: string): void;
     disconnect(): Promise<void>;
 }
+export interface IMqttServer {
+    start(): Promise<void>;
+  }
 
 export interface ICache {
     hget: (key: string, field: string) => Promise<string | null>;
@@ -48,3 +51,7 @@ export interface IRoomTemperatureHandler {
 export interface IRoomSensorEventHandler {
     processRoomSensorEvent: (topic: string, message: any) => void
 }
+export interface IHeatingSystemController {
+    sensorValuePublisher(sensorData: ISensorData): Promise<void>;
+    setRoomTemperature(): ExpressRouteFunc;
+  }

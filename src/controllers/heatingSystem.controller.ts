@@ -1,9 +1,9 @@
 import { Request, Response } from "express";
-import { ExpressRouteFunc, IMqttClient, IRoomTemperatureHandler, ISensorData, MqttTopics } from "../interfaces";
+import { ExpressRouteFunc, IHeatingSystemController, IMqttClient, IRoomTemperatureHandler, ISensorData, MqttTopics } from "../interfaces";
 import { getMqttClient, getRoomTemperatureHandler } from '../services/services-injection';
 import logger from "../utils/logger";
 
-export class HeatingSystemController {
+export class HeatingSystemController implements IHeatingSystemController {
     constructor(private mqttClient: IMqttClient = getMqttClient(), private roomTemperatureHandler: IRoomTemperatureHandler = getRoomTemperatureHandler()) {
     }
 

@@ -14,6 +14,7 @@ It also provides Mqtt implementation for pub/sub on multiple topics - it simulat
 **Note: I simulated the periodic temperature readings on the topic /readings/room-1/temperature, using NODEJS setInterval().**
 
 
+
 ## Getting Started:
 
     - Clone this repository to your local machine.
@@ -41,6 +42,7 @@ It also provides Mqtt implementation for pub/sub on multiple topics - it simulat
 
 <!-- ------------------------------------------------------------------------- -->
 
+
 ## Running the Application on local machine(Dev)
 
 ### development env:
@@ -58,6 +60,7 @@ It also provides Mqtt implementation for pub/sub on multiple topics - it simulat
 **The server should now be running on http://localhost:3000**
 
 
+
 ## Endpoints
 
 **We can use Swagger to define the api docs, however this is fine for now, since it's a proof of concept.**
@@ -72,6 +75,7 @@ It also provides Mqtt implementation for pub/sub on multiple topics - it simulat
         - Response: {
             "message": "Set valve to 50%"
         }
+
 
 
 ## Testing

@@ -1,4 +1,3 @@
-import { RedisClientType } from 'redis';
 import { generalConfig } from '../config';
 import { MqttClient } from '../infrastructure/mqttClient';
 import { RedisClient } from '../infrastructure/redisClient';

@@ -45,7 +45,7 @@ It also provides Mqtt implementation for pub/sub on multiple topics - it simulat
 <!-- ------------------------------------------------------------------------- -->
 
 
-## Running the Application on local machine(Dev)
+## Running the Application on local machine
 
 ### development env:
 
@@ -54,7 +54,7 @@ It also provides Mqtt implementation for pub/sub on multiple topics - it simulat
 
 *The server should now be running on http://localhost:3001*
 
-### development env:
+### production env:
 
     - Run:
         npm run start
